@@ -78,3 +78,82 @@ const user = "joão";
 if(user === "joão") {
     console.log("Bem vindo João")
 }
+
+// else
+
+const loggedIn = false;
+
+if(loggedIn) {
+    console.log("Esta autenticado");
+}
+else {
+    console.log("Não esta autenticado");
+}
+
+
+const q = 10
+const w = 15
+
+if(q >5 && w > 20) {
+    console.log("numeros mais altos")
+}
+else{
+    console.log("Os numeros nao sao mais altos")
+}
+
+// else if
+
+if(1 > 2){
+    console.log("Teste")
+} else if(2 > 3){
+    console.log("Teste 2")
+}else if(5 > 1){
+    console.log("agora Sim")
+}
+
+const userName = "João"
+const userAge = 21;
+
+if(userName === "José"){
+    console.log("Bem vindo josé")
+}else if(userName === "João" && userAge === 21){
+    console.log("Bem vindo João")
+}else{
+    console.log("Nenhuma condição foi aceita!")
+}
+
+// Estrutura de repitção
+
+let p = 0
+
+while(p < 5){
+    console.log(`Repetindo ${p}`)
+    p = p + 1;
+}
+
+// loop infinito
+
+// let x = 10
+
+//  while(x > 5) {
+//      console.log(`Imprimindo ${x}`)
+// }
+
+// do while
+
+let o = 9;
+
+do{
+    console.log(`valor de o ${o}`);
+    o--;
+} while(o > 1);
+
+// for 
+for(let t = 0; t < 10; t++){
+    console.log("repetindo alog....")
+}
+
+let r = 0
+for(r; r > 0; r = r -1){
+    console.log(`O r esta dfiminundi ${r}`);
+}
