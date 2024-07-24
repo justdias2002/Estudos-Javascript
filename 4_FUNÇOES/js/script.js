@@ -101,9 +101,75 @@ const parOuImpar = (n) => {
     return;
   }
 
-  console.log("Impar")
+  console.log("Impar");
 };
 
 parOuImpar(5);
 
 parOuImpar(10);
+
+// arrow funciton
+
+const raizQuadrada = (x) => {
+  return x * x;
+};
+console.log(raizQuadrada(4));
+
+const raizQuadradaZ = (x) => x * x;
+
+console.log(raizQuadradaZ(5));
+console.log(raizQuadradaZ(9));
+
+// parametro opcional
+
+const multiplication = function (m, n) {
+  if (n === undefined) {
+    return m * 2;
+  } else {
+    return m * n;
+  }
+};
+
+console.log(multiplication(5));
+console.log(multiplication(2, 8));
+
+const greeting = (name) => {
+  if (!name) {
+    console.log("Olá!");
+    return;
+  }
+  console.log(`Olá ${name}!`);
+};
+
+greeting();
+greeting("João");
+
+// argumento default
+
+const customGreeting = (name, greet = "Olá") => {
+  return `${greet}, ${name}!`;
+};
+console.log(customGreeting("João"));
+console.log(customGreeting("João", "Bom dia!"));
+
+const repeatText = (text, repeat = 2) => {
+  for (let i = 0; i < repeat; i++) {
+    console.log(text);
+  }
+};
+
+repeatText("Testando");
+repeatText("Testando a repetição *", 5);
+
+// closure
+
+function someFunction() {
+  let txt = "Alguma coisa";
+
+  function display() {
+    console.log(txt);
+  }
+  display();
+}
+
+someFunction();
