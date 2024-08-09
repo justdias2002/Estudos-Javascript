@@ -79,7 +79,7 @@ const obj = {
 console.log(obj instanceof Object);
 
 const obj2 = {
-  c: []
+  c: [],
 };
 console.log(obj2, obj);
 console.log(obj2);
@@ -90,7 +90,28 @@ console.log(Object.keys(obj));
 console.log(Object.keys(obj2));
 console.log(Object.keys(car));
 
-
 console.log(Object.entries(car)); //chave e valor
 
-// mutability
+// mutaçao
+
+const a = {
+  name: "João",
+};
+const b = a;
+
+console.log(a);
+console.log(b);
+
+console.log(a === b);
+
+a.age = 21;
+
+console.log(a)
+console.log(b)
+
+delete b.age
+
+console.log(a)
+console.log(b)
+
+// Lopps em arrays
