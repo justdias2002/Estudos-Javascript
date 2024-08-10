@@ -106,12 +106,51 @@ console.log(a === b);
 
 a.age = 21;
 
-console.log(a)
-console.log(b)
+console.log(a);
+console.log(b);
 
-delete b.age
+delete b.age;
 
-console.log(a)
-console.log(b)
+console.log(a);
+console.log(b);
 
 // Lopps em arrays
+
+const users = ["João", "Matheus", "Pedro", "Miguel"];
+
+for (let i = 0; i < users.length; i++) {
+  console.log(`Listando o usuario: ${users[i]}`);
+}
+
+// push o pop
+
+const array = ["a", "b", "c"];
+
+array.push("d");
+
+console.log(array);
+console.log(array.length);
+
+array.pop();
+console.log(array)
+
+const itemRemovido = array.pop()
+
+console.log(itemRemovido)
+console.log(array)
+
+
+// array shift e unshift
+
+const letters = ["a", "b", "c"]
+
+const letter = letters.shift()
+
+console.log(letter)
+console.log(letters)
+
+letters.unshift("x", "q", "r")
+
+letters.unshift("z")
+
+console.log(letters)
