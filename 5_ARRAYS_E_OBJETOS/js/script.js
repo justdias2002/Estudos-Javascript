@@ -132,25 +132,225 @@ console.log(array);
 console.log(array.length);
 
 array.pop();
-console.log(array)
+console.log(array);
 
-const itemRemovido = array.pop()
+const itemRemovido = array.pop();
 
-console.log(itemRemovido)
-console.log(array)
-
+console.log(itemRemovido);
+console.log(array);
 
 // array shift e unshift
 
-const letters = ["a", "b", "c"]
+const letters = ["a", "b", "c"];
 
-const letter = letters.shift()
+const letter = letters.shift();
 
-console.log(letter)
-console.log(letters)
+console.log(letter);
+console.log(letters);
 
-letters.unshift("x", "q", "r")
+letters.unshift("x", "q", "r");
 
-letters.unshift("z")
+letters.unshift("z");
 
-console.log(letters)
+console.log(letters);
+
+// indexOf e lastindexof
+
+const mylements = ["Morango", "Maçã", "Abacate", "Pêra", "Abacate"];
+
+console.log(mylements.indexOf("Maçã"));
+console.log(mylements.indexOf("Abacate"));
+
+console.log(mylements.lastIndexOf("Abacate"));
+
+console.log(mylements.lastIndexOf("Mamão"));
+
+// slice
+
+const testSlice = ["a", "b", "c", "d", "e", "f"];
+
+const subArray = testSlice.slice(2, 4);
+
+console.log(subArray);
+
+console.log(testSlice);
+
+const subArray2 = testSlice.slice(2, 4 + 1);
+
+console.log(subArray2);
+
+const subArray3 = testSlice.slice(10, 20);
+
+console.log(subArray3);
+
+const subArray4 = testSlice.slice(2);
+
+console.log(subArray4);
+
+// forEach
+
+const nums = [1, 2, 3, 4, 5];
+
+nums.forEach((numero) => {
+  console.log(`O numero é ${numero}`);
+});
+
+const posts = [
+  { title: "Primeiro post", category: "PHP" },
+  { title: "Segundo post", category: "JavaScript" },
+  { title: "Terceiro post", category: "Python" },
+];
+
+posts.forEach((post) => {
+  console.log(`Exibindo post ${post.title}, da categoria: ${post.category}`);
+});
+
+// include
+
+const brands = ["BMW", "VW", "Fiat"];
+
+console.log(brands.includes("Fiat"));
+console.log(brands.includes("KIA"));
+
+if (brands.includes("BMW")) {
+  console.log("Há carros da marca BMW");
+}
+
+// reverse
+const reverseTest = [1, 2, 3, 4, 5];
+
+reverseTest.reverse();
+
+console.log(reverseTest);
+
+// trim
+
+const trimTest = "   testando   \n";
+
+console.log(trimTest);
+
+console.log(trimTest.trim());
+
+// padstart
+
+const testPadStart = "1";
+
+const newNumber = testPadStart.padStart(4, "0");
+
+console.log(testPadStart);
+
+console.log(newNumber);
+
+const testePadEnd = newNumber.padEnd(10, "0");
+
+console.log(testePadEnd);
+
+// split
+
+const frase = "O rato roeu a roupa do rei de Roma";
+
+const arrayDaFrase = frase.split(" ");
+
+console.log(arrayDaFrase);
+
+// join
+
+const fraseDeNovo = arrayDaFrase.join("     ");
+
+console.log(fraseDeNovo);
+
+const itensParaComprar = ["Mouse", "Telcado", "Monitor"];
+
+const fraseDaCompra = `Precisamos comprar ${itensParaComprar.join(", ")}.`;
+
+console.log(fraseDaCompra);
+
+// repeat
+
+const palavra = "Testando ";
+
+console.log(palavra.repeat(5));
+
+// rest operator (...)
+
+const somaInfinita = (...args) => {
+  let total = 0;
+
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+  return total;
+};
+
+console.log(somaInfinita(1, 2, 3));
+console.log(somaInfinita(1, 20, 33, 12222, 54023, 238746));
+
+// for...of FOR OF
+
+const somaInfinita2 = (...args) => {
+  let total = 0;
+
+  for (num of args) {
+    total += num;
+  }
+
+  return total;
+};
+
+console.log(somaInfinita2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+// destructuring em objetos
+
+const userDetails = {
+  firstName: "João",
+  lastName: "Dias",
+  job: "Programador",
+};
+
+const { firstName, lastName, job } = userDetails;
+
+console.log(firstName, lastName, job);
+
+// renomear variaveis
+
+const { firstName: primeiroNome } = userDetails;
+
+console.log(firstName);
+
+console.log(userDetails);
+
+// destruturing em arrays
+
+const myList = ["Avião", "submarino", "Carro", "Moto"];
+
+const [veiculoA, veiculoB, veiculoC, veiculoD] = myList;
+
+console.log(veiculoA, veiculoC);
+
+// JSON
+
+const myJSon =
+  '{"name": "João", "age": 21, "skills": ["Javascript", "Python"]}';
+
+console.log(myJSon);
+
+// JSon para objs e objs para json
+
+const myObjct = JSON.parse(myJSon);
+
+console.log(myObjct);
+console.log(myObjct.name);
+
+// Json invalido
+
+// const badJson = '{"name": João, "age": 21}'
+
+// const myBadObjct = JSON.parse(badJson)
+
+myObjct.isOpenToWork = true;
+
+console.log(myObjct);
+
+const myNewJson = JSON.stringify(myObjct);
+
+console.log(myNewJson);
