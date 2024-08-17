@@ -117,3 +117,68 @@ Cachorro.prototype.uivar = function () {
 
 console.log(Cachorro);
 husky.uivar();
+
+// classes es6
+class CachorroClasse {
+  constructor(nome, raca) {
+    this.nome = nome;
+    this.raca = raca;
+  }
+}
+const jeff = new CachorroClasse("Jeff", "Labrador");
+
+console.log(jeff);
+console.log(Object.getPrototypeOf(jeff));
+
+// mais sobre classes
+
+class Camimhao {
+  constructor(eixos, cor) {
+    this.eixos = eixos;
+    this.cor = cor;
+  }
+
+  descreverCaminhao() {
+    console.log(`Este caminhão tem ${this.eixos} eixos e é da cor ${this.cor}`);
+  }
+}
+
+const scania = new Camimhao(6, "Vermelho");
+
+console.log(scania);
+scania.descreverCaminhao();
+
+Camimhao.motor = 4;
+
+const c2 = new Camimhao(6, "Azul");
+
+console.log(c2);
+
+console.log(c2.motor);
+
+Camimhao.prototype.motor = 4.0;
+
+const c3 = new Camimhao(6, "Azul");
+
+console.log(c3.motor);
+
+// Override
+
+class Humano {
+  constructor(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+  }
+}
+
+const joao = new Humano("João", 21);
+
+console.log(joao);
+
+console.log(Humano.prototype.idade);
+
+Humano.prototype.idade = "Não Definida";
+
+console.log(joao.idade);
+
+console.log(Humano.prototype.idade);
